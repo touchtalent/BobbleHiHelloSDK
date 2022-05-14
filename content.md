@@ -11,7 +11,7 @@ The SDK hosts a massive repository with more than 100K+ content.
 > *OTF - OTF refers to <b>On The Fly</b>, which is a capability of adding on-demand text layer within a content to give it a personalised touch.
 ## <a name="implementation_steps"></a>Implementation Steps
 
-- Add and initialise BobbleSDK Core in your project. Refer [here](Readme.md#setup) for steps.
+- Add and initialise BobbleSDK Core in your project. Refer [here](core.md#setup) for steps.
 
 - Add following dependency in your application module’s build.gradle.
 ```groovy
