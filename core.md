@@ -7,19 +7,15 @@ BobbleSDK is a collection of multiple SDKs which can be used to power conversati
 - System architechture (ABIs) supported are [arm64-v8a, armeabi-v7a]
 
 ## BobbleIME 
-Add a fully functional IME within your app with features such as global typing support, content sharing, emojis and BigMojis, keyboard themes, PopText, etc. The IME can be integrated within any application with very minimal efforts. Know more [here](readme_keyboard.md).
+Add a fully functional IME within your app with features such as global typing support, content sharing, emojis and BigMojis, keyboard themes, PopText, etc. The IME can be integrated within any application with very minimal efforts.
 
 > Apart from the fully functional IME, this SDK also exposes APIs for individual modules (as mentioned below) which can be used to extend those functionalities for deep integration with your application.
 
 ## Individual Modules
 
-- [Transliteration](readme_transliteration.md) - Accepts input in English script and transliterates them into native regional language. E.g - <i>"Namaste" -> "नमस्ते"</i>
+- [Transliteration](transliteration.md) - Accepts input in English script and transliterates them into native regional language. E.g - <i>"Namaste" -> "नमस्ते"</i>
 
-- [Contextual Emoji Suggestion](readme_emoji.md) - Process an input text and get AI based contextual emoji suggestions. E.g - <i>"gussa mat dila" -> 😤,👿,😡,🙏,😠</i>
-- [On-device Intent detection](readme_intent_detection.md) - Process an input text and derive user's intent out of it without user's data actually leaving user's device. E.g - <i>"naya mobile chaiye lekin paise nahi hai yaar" -> Intents - <b>Shopping</b>, <b>Loan</b></i>
-- [Avatar, Stickers, Animated Stickers, Regional GIFs](readme_content.md) - Convert your user's selfies into fun personalised avatars <i>(Bobble Head)</i> which can be used independently as well as with large repository of personalised and expressive content formats(100K+).
-- [Speech to Text](readme_speech_to_text.md) - Transcribe speech to text in 9 most used Indic langauges. 
-- [Language Detection](bobble_language_detection.md) - Process an input text and detect language from it.
+- [Avatar, Stickers, Animated Stickers, Regional GIFs](content.md) - Convert your user's selfies into fun personalised avatars <i>(Bobble Head)</i> which can be used independently as well as with large repository of personalised and expressive content formats(100K+).
 
 
 ### <a name="setup"></a>Setting Up
@@ -60,16 +56,3 @@ Apart from the necessary permissions, the SDK recommends the client app to add f
 
 >P.S - Individual modules may require specific permissions which will be declared in their respective documentation.
 
-### <a name="size_chart"></a>SDK Size
-Below is the size (approx) of the each module that would contribute to the APK size if integrated.
-
-The sizes mentioned below are estimates and may vary based on different factors - Format of distribution (APK/AAB), device architecture used, 3rd party libraries used. Also, please note that Google Play Store compresses your actual APK size to 90% while delivering it to end user. The SDKs (except core) can also be used in dynamic modules to bypass extra APK size.
-
-| Module                    | Size (in MBs) |
-| --------------------------| ----------    |
-| Core                      | 0.2           |
-| Transliteration           | 1.8           |
-| Contextual Emoji          | 0.2 + 1.8 (Shared across modules)          |
-| Ondevice Intent Detection | 0.2 + 1.8 (Shared across modules)          |
-| Avatar, Stickers, GIFs    | 2           | 
-| Speech to text            | 0.2 + 1.8 (Shared across modules)          |
