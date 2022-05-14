@@ -5,7 +5,7 @@ Bobble Transliteration SDK is an input tool that can be integrated into any Andr
 
 ## <a name="setting_up"></a>Setting Up
 
-- Add and initialise BobbleSDK Core in your project. Refer [here](Readme.md#setup) for steps.
+- Add and initialise BobbleSDK Core in your project. Refer [here](core.md#setup) for steps.
 
 - Add the following dependency in your application module’s build.gradle.
 ```groovy
