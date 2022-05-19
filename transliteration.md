@@ -37,7 +37,6 @@ Create an instance of ```BobbleTransliterator``` to start a new transliteration 
 
 >P.S - The language will be automatically installed if not installed earlier.
 
-#### Mixed Typing (continuous / Non-continuous typing)
 ```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and returns results accordingly. 
 ```java
 var transliteration: String;
