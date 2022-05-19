@@ -37,17 +37,8 @@ Create an instance of ```BobbleTransliterator``` to start a new transliteration 
 
 >P.S - The language will be automatically installed if not installed earlier.
 
- ```BobbleTransliterator``` facilitates both <b><i>continuous typing</i></b> as well as <b><i>non-continuous typing</i></b>.
-
-#### Continuous Typing
-```void bind(inputBox: EditText)``` - The transliterator binds itself with given ```EditText``` and automatically transliterates it, as it receives input events.
-```java
-val input = binding.editText
-transliterator.bind(input);
-```
-
 #### Mixed Typing (continuous / Non-continuous typing)
-```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and handles both continuous / non-continuous cases accordingly. 
+```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and returns results accordingly. 
 ```java
 var transliteration: String;
 transliteration = transliterator.transliterate("n");      // transliteration = "न"
@@ -58,8 +49,6 @@ transliteration = transliterator.transliterate("namas");  // transliteration = "
 transliteration = transliterator.transliterate("namast"); // transliteration = "नमस्त"
 transliteration = transliterator.transliterate("namaste");// transliteration = "नमस्ते" 
 ```
-
->P.S. - BobbleTransliterator can be used only in a single mode at a time, either ```binded mode``` or ```transliterate mode```, trying to use both modes on a single object will throw ```UnsupportedOperationException```. Create different objects to use multiple modes at the same time.
 
 3. Close BobbleTransliterator object -
 The ```BobbleTransliterator``` object must be closed to safely release resources when not required.
