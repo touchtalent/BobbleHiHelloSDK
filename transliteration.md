@@ -34,13 +34,11 @@ class SplashActivity : AppCompatActivity {
 
 2. Start transliterating -
 Create an instance of ```BobbleTransliterator``` to start a new transliteration session. Pass the language locale (refer [here](#supported_languages) for complete list) in the context of which transliteration needs to take place.
-```kotlin
-val transliterator = BobbleTransliterator("hi")
-```
+
 >P.S - The language will be automatically installed if not installed earlier.
 
-```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and handles both continuous / non-continuous cases accordingly. 
-```kotlin
+```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and returns results accordingly. 
+```java
 var transliteration: String;
 transliteration = transliterator.transliterate("n");      // transliteration = "न"
 transliteration = transliterator.transliterate("na");     // transliteration = "ना"
@@ -54,10 +52,10 @@ transliteration = transliterator.transliterate("namaste");// transliteration = "
 3. Close BobbleTransliterator object -
 The ```BobbleTransliterator``` object must be closed to safely release resources when not required.
 
-```kotlin
+```java
 class SplashActivity : AppCompatActivity {
 
-    var transliterator: BobbleTransliterator? = null
+    val transliterator: BobbleTransliterator? = null
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
