@@ -40,7 +40,7 @@ val transliterator = BobbleTransliterator("hi")
 >P.S - The language will be automatically installed if not installed earlier.
 
 ```fun transliterate(input: String): String``` - Pass the complete input to get the transliterated output. ```BobbleTransliterator``` evaluates the latest input based on last input and handles both continuous / non-continuous cases accordingly. 
-```java
+```kotlin
 var transliteration: String;
 transliteration = transliterator.transliterate("n");      // transliteration = "न"
 transliteration = transliterator.transliterate("na");     // transliteration = "ना"
@@ -54,10 +54,10 @@ transliteration = transliterator.transliterate("namaste");// transliteration = "
 3. Close BobbleTransliterator object -
 The ```BobbleTransliterator``` object must be closed to safely release resources when not required.
 
-```java
+```kotlin
 class SplashActivity : AppCompatActivity {
 
-    val transliterator: BobbleTransliterator? = null
+    var transliterator: BobbleTransliterator? = null
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

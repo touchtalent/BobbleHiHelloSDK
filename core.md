@@ -20,22 +20,34 @@ Add a fully functional IME within your app with features such as global typing s
 
 ### <a name="setup"></a>Setting Up
 
+- Setup Maven in `settings.gradle` (`build.gradle`(project level) for older versions of Android Gradle Plugin)
+```groovy
+maven {
+    url "<mavenReadUrl>" // Credentials for maven repo
+    credentials {
+        username "<mavenReadUsername>"
+        password "<mavenReadPassword>"
+    }
+}
+```
+- Make sure that `jcenter()` exists in the repository list, since our libraries depends on libraries hosted on `jcenter()`
+
 - BobbleSDK uses BoM (Bill of Materials) to resolve versions of all modules by specifying a single version. Import the BoM for the BobbleSDK platform by adding following dependency in your application module’s build.gradle. 
 ```groovy
 implementation platform('com.touchtalent.bobblesdk:bom:1.0.0')
 ```
+
 - Import BobbleSDK Core which acts as base for all modules.
 ```groovy
 implementation 'com.touchtalent.bobblesdk:core'
 ```
-- Initialise BobbleSDK in your Application's ```onCreate()```
-```java
-public class MyApplication extends Application{
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        BobbleSDK.initialise(this);
+- Initialise BobbleSDK in your Application's ```onCreate()```
+```kotlin
+class SampleDemoApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        BobbleSDK.initialise(this)
     }
 }
 ```
