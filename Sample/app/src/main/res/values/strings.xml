@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bobble Sdk Demo</string>
+    <string name="create_head">Create head</string>
+    <string name="bobble_sdk_demo">Bobble Sdk Demo</string>
+    <string name="content">Content</string>
+    <string name="head">Head</string>
+    <string name="transliteration">Transliteration</string>
+    <string name="check_heads">Check heads</string>
+    <string name="no_heads_created">No heads created</string>
+    <string name="hindi">Hindi</string>
+    <string name="bangla">Bangla</string>
+    <string name="enter_text">Try typing \"namaste\"…</string>
+    <string name="transliterate">Transliterate</string>
+</resources>
