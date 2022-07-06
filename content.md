@@ -95,6 +95,22 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+2. Bobble Heads can also be created using a image file `createBobbleHead(file: File,headCreationCallback: HeadCreationCallback)` - Get Bobble head as a bitmap and file onSuccess Callback, onFailure throw exception
+```kotlin
+// Callback function for creating Bobble head from image
+BobbleHeadSdk.createBobbleHead(
+    file,
+    object : HeadCreationCallback {
+        override fun onSuccess(outputFile: File?, outputBitmap: Bitmap) {
+            // do anything with file and bitmap
+        }
+        override fun onFailure(throwable: Throwable) {
+            // handle error
+        }
+
+    })
+```
+
 - Manage created heads
 
 1. `suspend getHeadById(headId:Long):Result<BobbleHead>` - Get BobbleHead object corresponding the given headId
