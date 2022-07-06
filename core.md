@@ -51,6 +51,12 @@ class SampleDemoApp : Application() {
     }
 }
 ```
+- Provide user Age and Gender details to BobbleSDK
+```kotlin
+    BobbleSDK.setUserAge(34)
+    BobbleSDK.setUserGender(BobbleSDK.Gender.MALE)
+```
+
 ### <a name="permissions"></a>Required Permissions
 
 The SDK and modules uses few basic permissions, as listed below, for their smooth functioning. 
